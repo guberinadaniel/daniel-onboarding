@@ -1,0 +1,22 @@
+
+# MCI-Drupal docker-compose.yml v1.1 see details in docs/docker-compose.yml
+# 2017 (C) @MacMladen
+
+core: "8.x"
+api: 2
+projects:
+  # Core
+  - drupal
+  # Modules
+  - paragraphs
+  - bootstrap_paragraphs
+  - bootstrap_layouts
+  - webform
+  - admin_toolbar
+  - module_filter
+  # Themes
+  - bootstrap
+
+defaults:
+  projects:
+    subdir: "contrib"
