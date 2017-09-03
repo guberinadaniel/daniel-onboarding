@@ -5,6 +5,10 @@
 //
 // ========================================
 
-.navigation {
-
+.menu--main li.menu-item {
+  display: inline-block;
+  margin: auto;
+  a{
+    text-decoration: none;
+  }
 }
