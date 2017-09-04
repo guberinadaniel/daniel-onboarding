@@ -5,15 +5,36 @@
 //
 // ========================================
 
-header .region-header {
+.region-header {
   display: flex;
-  .block-block-content5b603017-4020-4384-8db8-4bb1959e4d51{
-
+  margin: 0 10px;
+  .block-block-content5b603017-4020-4384-8db8-4bb1959e4d51 {
+    width: 60%;
+    .field__item {
+      display: flex;
+      justify-content: flex-start;
+    }
   }
-  .block-block-contentddc38799-db23-4a95-a826-9730f744b179{
-
+  .block-block-contentddc38799-db23-4a95-a826-9730f744b179 {
+    width: 20%;
+    .field__item {
+      display: flex;
+      justify-content: flex-end;
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
   }
-  .block-block-content8627d914-4328-4661-b543-dc96d8aa2844{
-
+  .block-block-content8627d914-4328-4661-b543-dc96d8aa2844 {
+    width: 20%;
+    .field__item {
+      display: flex;
+      justify-content: flex-end;
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
   }
 }

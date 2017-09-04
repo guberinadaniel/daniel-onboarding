@@ -8,6 +8,7 @@
   a { text-decoration: none;
       text-transform: uppercase;
   }
+  margin: 10px;
   display: flex;
   justify-content: space-between;
   .block-system-branding-block {
@@ -26,7 +27,6 @@
     width: 25%;
     .menu .menu-item{
       text-align: right;
-      margin: 0 10px;
     }
   }
 }
