@@ -1,17 +1,13 @@
-.region-footer-copyright {
+.region-footer-service {
   display: inline-block;
   justify-content: center;
   width: 100%;
-  margin: 10px 10px 50px 10px;
+  margin: 50px 10px 50px 10px;
   .field__item {
     hr {
+      margin: 100px 10px 50px 10px;
       width: 100%;
       border-top: 1px solid rgb(221, 231, 233);
-    }
-    p {
-      text-transform: uppercase;
-      font-size: small;
-      color: rgb(85, 89, 95);
     }
   }
 }

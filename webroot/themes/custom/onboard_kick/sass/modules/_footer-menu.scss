@@ -1,13 +1,13 @@
 // ========================================
 //
-// @file _footer.scss
+// @file _footer-menu.scss
 // Footer element on the page
 //
 // ========================================
 
 .region-footer-menu {
   display: flex;
-  margin: 50px 10px;
+  margin: -50px 10px 50px 10px;
   a {
     text-decoration: none;
     text-transform: uppercase;
