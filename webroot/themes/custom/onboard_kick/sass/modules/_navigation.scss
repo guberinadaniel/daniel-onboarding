@@ -5,16 +5,28 @@
 //
 // ========================================
 .region-primary-menu {
-  .block-system-branding-block, .menu--main, .menu--account {
-    display: inline-block;
+  a { text-decoration: none;
+      text-transform: uppercase;
+  }
+  display: flex;
+  justify-content: space-between;
+  .block-system-branding-block {
+    width: 25%;
+  }
+  .menu--main {
+    width: 50%;
+    ul.menu {
+      display: flex;
+      li.menu-item{
+        margin: auto;
+      }
     }
   }
-
-
-.menu--main li.menu-item {
-  display: inline-block;
-  margin: auto;
-    a {
-      text-decoration: none;
+  .menu--account {
+    width: 25%;
+    .menu .menu-item{
+      text-align: right;
+      margin: 0 10px;
     }
   }
+}

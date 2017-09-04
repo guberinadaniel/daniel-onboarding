@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/navigation/menu-local-action.html.twig */
-class __TwigTemplate_04f482615e7cff6f8a2de611a6d2335822feada1ee7c3d7d712aff349f69cfc3 extends Twig_Template
+/* core/themes/classy/templates/form/dropbutton-wrapper.html.twig */
+class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f05a0bd extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,13 +15,13 @@ class __TwigTemplate_04f482615e7cff6f8a2de611a6d2335822feada1ee7c3d7d712aff349f6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array();
+        $tags = array("if" => 12, "spaceless" => 13);
         $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('sandbox')->checkSecurity(
-                array(),
+                array('if', 'spaceless'),
                 array(),
                 array()
             );
@@ -39,18 +39,28 @@ class __TwigTemplate_04f482615e7cff6f8a2de611a6d2335822feada1ee7c3d7d712aff349f6
             throw $e;
         }
 
-        // line 13
-        echo "<li";
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["attributes"]) ? $context["attributes"] : null), "html", null, true));
-        echo ">";
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["link"]) ? $context["link"] : null), "html", null, true));
-        echo "</li>
-";
+        // line 12
+        if ((isset($context["children"]) ? $context["children"] : null)) {
+            // line 13
+            echo "  ";
+            ob_start();
+            // line 14
+            echo "    <div class=\"dropbutton-wrapper\">
+      <div class=\"dropbutton-widget\">
+        ";
+            // line 16
+            echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
+            echo "
+      </div>
+    </div>
+  ";
+            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
+        }
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/navigation/menu-local-action.html.twig";
+        return "core/themes/classy/templates/form/dropbutton-wrapper.html.twig";
     }
 
     public function isTraitable()
@@ -60,7 +70,7 @@ class __TwigTemplate_04f482615e7cff6f8a2de611a6d2335822feada1ee7c3d7d712aff349f6
 
     public function getDebugInfo()
     {
-        return array (  43 => 13,);
+        return array (  52 => 16,  48 => 14,  45 => 13,  43 => 12,);
     }
 
     public function getSource()
@@ -68,16 +78,23 @@ class __TwigTemplate_04f482615e7cff6f8a2de611a6d2335822feada1ee7c3d7d712aff349f6
         return "{#
 /**
  * @file
- * Theme override for a single local action link.
+ * Theme override for a dropbutton wrapper.
  *
  * Available variables:
- * - attributes: HTML attributes for the wrapper element.
- * - link: A rendered link element.
+ * - children: Contains the child elements of the dropbutton menu.
  *
- * @see template_preprocess_menu_local_action()
+ * @see template_preprocess()
  */
 #}
-<li{{ attributes }}>{{ link }}</li>
+{% if children %}
+  {% spaceless %}
+    <div class=\"dropbutton-wrapper\">
+      <div class=\"dropbutton-widget\">
+        {{ children }}
+      </div>
+    </div>
+  {% endspaceless %}
+{% endif %}
 ";
     }
 }
