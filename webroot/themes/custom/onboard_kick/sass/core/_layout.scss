@@ -5,3 +5,52 @@
 //
 // ========================================
 
+.layout-sidebar-first {
+  width: 25%;
+  display: inline-block;
+}
+
+.layout-content {
+  width: 50%;
+  display: inline-block;
+}
+
+.layout-sidebar-second {
+  width: 24%;
+  display: inline-block;
+}
+
+.sidebar-none .layout-content{
+  width: 100%;
+}
+
+.sidebar-one .layout-content {
+  width: 74%;
+}
+
+/**
+ * Container
+ */
+
+.layout-container {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+@media all and (min-width: 851px) {
+  .layout-container {
+    max-width: 1290px;
+  }
+}
+
+/**
+ * Main
+ */
+.layout-main-wrapper {
+  min-height: 300px;
+}
+.layout-main {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
