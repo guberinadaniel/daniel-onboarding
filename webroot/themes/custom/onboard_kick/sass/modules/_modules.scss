@@ -5,8 +5,11 @@
 //
 // ========================================
 
+@import 'banner';
 @import 'header';
-@import 'footer';
+@import 'footer-menu';
 @import 'navigation';
 @import 'forms';
 @import 'buttons';
+@import "footer-copyright";
+@import "footer-service";

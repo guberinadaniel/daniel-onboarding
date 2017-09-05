@@ -1,0 +1,41 @@
+// ========================================
+//
+// @file _footer-menu.scss
+// Footer element on the page
+//
+// ========================================
+
+.region-footer-menu {
+  display: flex;
+  margin: -50px 10px 50px 10px;
+  a {
+    color: rgb(122, 132, 134);
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: rgb(221, 231, 233);
+    }
+    &:active {
+      color: rgb(0, 0, 0);
+    }
+  }
+  p {
+    text-transform: uppercase;
+    color: rgb(122, 132, 134);
+  }
+  strong {
+    color: rgb(0, 0, 0);
+  }
+  .block-block-contentdc505545-f138-45f9-829d-b8878326ada7 {
+    width: 15%;
+  }
+  .block-block-contentdc02d1af-de5f-4296-b214-6a80ef84ac78 {
+    width: 35%;
+  }
+  .block-block-content5e03ca55-9a9d-4b3d-9823-221e0ca3dc02 {
+    width: 25%;
+  }
+  .block-block-content213da5eb-5fbc-42ca-8f8f-4ecc996a0d10 {
+    width: 25%;
+  }
+}

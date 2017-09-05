@@ -8,12 +8,17 @@ version: 1.x
 
 # Include libraries
 libraries:
-  - kickstarter/global-css
-  - kickstarter/global-js
+  - onboard_kick/global-css
+  - onboard_kick/global-js
 
 # Regions
 regions:
   header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
   content: 'Content'
-  sidebar: 'Sidebar'
-  footer: 'Footer'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer_service: 'Footer service'
+  footer_menu: 'Footer menu'
+  footer_copyright: 'Footer copyright'
