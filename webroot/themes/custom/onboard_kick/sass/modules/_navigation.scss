@@ -5,9 +5,19 @@
 //
 // ========================================
 .region-primary-menu {
-  a { text-decoration: none;
-      text-transform: uppercase;
+  a {
+    color: rgb(122, 132, 134);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: rgb(221, 231, 233);
+    }
+    &:active {
+      color: rgb(0, 0, 0);
+    }
   }
+
   margin: 10px;
   display: flex;
   justify-content: space-between;

@@ -9,8 +9,15 @@
   display: flex;
   margin: -50px 10px 50px 10px;
   a {
+    color: rgb(122, 132, 134);
     text-decoration: none;
     text-transform: uppercase;
+    &:hover {
+      color: rgb(221, 231, 233);
+    }
+    &:active {
+      color: rgb(0, 0, 0);
+    }
   }
   p {
     text-transform: uppercase;
