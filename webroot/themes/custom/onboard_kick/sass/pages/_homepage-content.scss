@@ -7,16 +7,17 @@
 
 .region-content {
   display: flex;
+
   .block-block-content40ec4cb5-3dd0-44ff-97e9-8e27e7fda203 {
     width: 60%;
     margin: 40px 20px 10px 0;
-
   }
   .block-block-content18449659-8b5a-4588-b607-7aef17f5f143 {
     width: 40%;
     margin: 60px 0 10px 20px;
 
     .boost-event {
+
       img {
         vertical-align: top;
         padding-top: 25px;
@@ -31,9 +32,44 @@
   }
 }
 .block-views-blocklatest-events-block-1 {
-  padding: 100px 0;
+  padding: 60px 0 100px 0;
   background-color: rgb(221, 231, 233) ;
+  h2 {
+    text-transform: uppercase;
+    padding-bottom: 40px;
+  }
   .view-content {
     display: flex;
+    justify-content: space-between;
+    img {
+      width: 290px;
+      height: 300px;
+    }
+    .views-field-title {
+      padding: 20px 0 0 30px;
+      a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          color: rgb(110, 110, 110);
+        }
+        &:active {
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+    .views-field-field-start-date{
+      padding: 0 0 0 30px;
+      time {
+        color: rgb(247, 147, 29);
+        font-size: small;
+      }
+    }
   }
+}
+.prvi-pokusaj {
+  background: white;
+  padding-bottom: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
