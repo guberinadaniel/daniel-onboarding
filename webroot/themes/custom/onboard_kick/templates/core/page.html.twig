@@ -51,6 +51,7 @@
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
 
+  <div class="layout-content-wraper">
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
@@ -61,7 +62,14 @@
     {% endif %}
 
     <div class="layout-content">
+
         {{ page.content }}
+
+        <div class="layout-content-first-second">
+            {{ page.content_first }}
+            {{ page.content_second }}
+        </div>
+
     </div>{# /.layout-content #}
 
     {% if page.sidebar_second %}
@@ -71,6 +79,7 @@
     {% endif %}
 
   </main>
+  </div>
   <footer role="contentinfo">
       {% if page.footer_service %}
           {{ page.footer_service }}
