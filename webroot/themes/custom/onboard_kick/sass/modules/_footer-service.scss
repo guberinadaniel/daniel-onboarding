@@ -1,7 +1,7 @@
 .region-footer-service {
   display: inline-block;
   width: 100%;
-  margin: 50px 10px 50px 10px;
+  margin: 10px 0 50px 0;
   .field__item {
     h2 {
       text-align: center;
@@ -16,7 +16,7 @@
       color: rgb(85, 89, 95);
     }
     hr {
-      margin: 100px 10px 50px 10px;
+      margin: 60px 0 50px 0;
       width: 100%;
       border-top: 1px solid rgb(221, 231, 233);
     }
@@ -35,7 +35,7 @@
         text-transform: uppercase;
         cursor: pointer;
         margin: 20px 10px 0 10px;
-        padding: 0.500em 1.063em;
+        padding: 0.500em 2.1em;
         border-radius: 1.2em;
         line-height: normal;
         a {
@@ -65,4 +65,15 @@
       }
     }
   }
+}
+.orange-triangle {
+  position: relative;
+  top: 67px;
+  left: 1052px;
+}
+.blue-triangle {
+  position: relative;
+  top: 67px;
+  left: 1080px;
+  z-index: 1;
 }
