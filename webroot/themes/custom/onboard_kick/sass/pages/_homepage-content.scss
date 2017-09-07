@@ -73,3 +73,46 @@
   padding-bottom: 60px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
+
+.block-views-blockfeatured-companies-block-1 {
+  padding: 60px 0 80px 0;
+  h2 {
+    text-transform: uppercase;
+    padding-bottom: 40px;
+  }
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    .views-row {
+      margin: 40px 0 10px 0;
+      width: 420px;
+      .views-field-field-company-logo {
+        img {
+          width: 80px;
+          height: 80px;
+          float: left;
+          margin: 0 20px 20px 30px;
+        }
+      }
+      .views-field-title {
+        display: inline;
+        vertical-align: top;
+        a {
+          color: rgb(0, 0, 0);
+          text-decoration: none;
+          &:hover {
+            color: rgb(110, 110, 110);
+          }
+          &:active {
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+      .views-field-body {
+        p {
+          color: rgb(110, 110, 110);
+        }
+      }
+    }
+  }
+}
