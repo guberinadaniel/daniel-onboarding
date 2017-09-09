@@ -1,0 +1,186 @@
+
+#block-onboard-kick-companiesbanner{
+  img {
+    width: 100%;
+    //width: 100vw;
+  }
+}
+//*********************************************
+//#Company name and description field with img
+//*********************************************
+
+.node--type-company-name {
+  padding-right:40px;
+  .field--name-field-company-title {
+    font-size: 24px;
+    border-bottom: 1px solid rgb(221, 231, 233);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  img {
+    float: left;
+    padding: 20px 20px 15px 0;
+  }
+  p {
+
+  }
+}
+
+//************************
+//#Industry field
+//************************
+
+.field--name-field-industry {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 87px;
+  border: 3px solid rgb(221, 231, 233);
+  margin: 20px 10px 20px 0;
+  a {
+    border-left: 4px solid rgb(41, 193, 225);
+    position: inherit;
+    top: 33px;
+    padding-left: 15px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    &:hover {
+      color: rgb(110, 110, 110);
+    }
+    &:active {
+      color: rgb(0, 0, 0);
+    }
+  }
+  ::before {
+    content: url("/themes/custom/onboard_kick/assets/images/icons/data-icon.png");
+    padding-right: 45px;
+    position: relative;
+    top: 18px;
+    left: 20px;
+    display: block;
+    float: left;
+  }
+}
+
+//************************
+//#Company website field
+//************************
+
+.field--name-field-company-website{
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 87px;
+  border: 3px solid rgb(221, 231, 233);
+  margin: 20px 10px 20px 0;
+  a {
+    border-left: 4px solid rgb(41, 193, 225);
+    position: inherit;
+    top: 33px;
+    padding-left: 15px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    &:hover {
+      color: rgb(110, 110, 110);
+    }
+    &:active {
+      color: rgb(0, 0, 0);
+    }
+  }
+  ::before {
+    content: url("/themes/custom/onboard_kick/assets/images/icons/web-icon.png");
+    padding-right: 45px;
+    position: relative;
+    top: 18px;
+    left: 20px;
+    display: block;
+    float: left;
+  }
+}
+
+//****************************
+//#Company phone field
+//****************************
+.field--name-field-comapany-address2 {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 87px;
+  border: 3px solid rgb(221, 231, 233);
+  margin: 20px 10px 20px 0;
+  p {
+    border-left: 4px solid rgb(41, 193, 225);
+    position: inherit;
+    top: 33px;
+    padding-left: 15px;
+    color: rgb(0, 0, 0);
+    display: inline;
+  }
+  &::before {
+    content: url("/themes/custom/onboard_kick/assets/images/icons/phone-icon.png");
+    padding-right: 45px;
+    position: relative;
+    top: 18px;
+    left: 20px;
+    display: block;
+    float: left;
+  }
+}
+//****************************
+//#Company email field
+//****************************
+
+.field--name-field-company-email2 {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 87px;
+  border: 3px solid rgb(221, 231, 233);
+  margin: 20px 10px 20px 0;
+  p {
+    border-left: 4px solid rgb(41, 193, 225);
+    position: inherit;
+    top: 33px;
+    padding-left: 15px;
+    color: rgb(0, 0, 0);
+    display: inline;
+  }
+  &::before {
+    content: url("/themes/custom/onboard_kick/assets/images/icons/mail-icon.png");
+    padding-right: 45px;
+    position: relative;
+    top: 18px;
+    left: 20px;
+    display: block;
+    float: left;
+  }
+}
+
+//********************************
+//#Address with Google map field
+//********************************
+
+.field--name-field-company-address {
+  display: inline-block;
+  width: 820px;
+  height: 250px;
+  border: 3px solid rgb(221, 231, 233);
+  iframe {
+    float: right;
+    padding: 10px 10px 10px 0;
+  }
+  p {
+    float: left;
+    display: inline-block;
+    width: 190px;
+    padding-left: 20px;
+    padding-top: 50px;
+  }
+  ::before{
+    float: left;
+    content: url("/themes/custom/onboard_kick/assets/images/icons/address-icon.png");
+    border-right: 4px solid rgb(41, 193, 225);
+    padding: 20px 20px 20px 0;
+    margin: 0 20px 0 20px;
+  }
+}
