@@ -1,3 +1,6 @@
+//*********************************************
+//#Company page banner
+//*********************************************
 
 #block-onboard-kick-companiesbanner{
   img {
@@ -182,5 +185,49 @@
     border-right: 4px solid rgb(41, 193, 225);
     padding: 20px 20px 20px 0;
     margin: 0 20px 0 20px;
+  }
+}
+
+//*****************************************
+//#Company sidebar second | latest events
+//*****************************************
+
+.block-views-blockevents-what-were-up-to-block-1 {
+  h2 {
+    text-transform: uppercase;
+    padding-left: 10px;
+    margin: 50px 0 40px 0;
+  }
+  .views-field-title {
+    a {
+      border-left: 4px solid rgb(41, 193, 225);
+      position: inherit;
+      text-transform: uppercase;
+      text-decoration: none;
+      top: 33px;
+      padding-left: 15px;
+      color: rgb(0, 0, 0);
+      &:hover {
+        color: rgb(110, 110, 110);
+      }
+      &:active {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+  .views-field-field-start-date {
+    margin: 8px 0;
+    color: rgb(247, 147, 29);
+    font-size: small;
+    padding-left: 20px;
+  }
+  .views-field-field-event-image {
+    padding-left: 20px;
+    margin: 15px 0;
+    img {
+      &:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+      }
+    }
   }
 }
