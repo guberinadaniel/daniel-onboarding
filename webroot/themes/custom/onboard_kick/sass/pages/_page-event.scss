@@ -1,0 +1,72 @@
+//********************
+//#Event page banner
+//********************
+
+#block-onboard-kick-eventshero {
+  img {
+    width: 100%;
+    //width: 100vw;
+  }
+}
+
+//*****************************************************
+//#Company sidebar first | about organizer & location
+//*****************************************************
+
+.region-sidebar-first {
+  .block-views-blockabout-organizer-location-block-1, .block-views-blockabout-location-block-1 {
+    h2 {
+      text-transform: uppercase;
+      margin: 40px 0;
+    }
+    div .views-row {
+      border: 2px solid rgb(221, 231, 233);
+      padding: 20px;
+      .views-field-field-company-logo {
+        display: block;
+        float: left;
+      }
+      .views-field-field-company-title {
+        display: inline-block;
+        a {
+          text-decoration: none;
+          margin: 0 0 0 20px;
+          border-left: 4px solid rgb(247, 147, 29);
+          padding: 0 0 7px 15px;
+          vertical-align: sub;
+          color: rgb(0, 0, 0);
+          &:hover {
+            color: rgb(110, 110, 110);
+          }
+          &:active {
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+      .views-field-field-location-image {
+        display: block;
+        float: left;
+      }
+      .views-field-title {
+        display: inline-block;
+        a {
+          text-decoration: none;
+          margin: 0 0 0 20px;
+          border-left: 4px solid rgb(41, 193, 225);
+          padding: 0 0 7px 15px;
+          vertical-align: sub;
+          color: rgb(0, 0, 0);
+          &:hover {
+            color: rgb(110, 110, 110);
+          }
+          &:active {
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+      p {
+        display: inline-block;
+      }
+    }
+  }
+}
