@@ -1,0 +1,226 @@
+//*********************************************
+//#Location page banner
+//*********************************************
+
+#block-onboard-kick-locationshero {
+  img {
+    width: 100%;
+    //width: 100vw;
+  }
+}
+
+//*********************************************
+//#Location name and description field with img
+//*********************************************
+.node--type-location {
+  padding-right:40px;
+  .field--name-field-title {
+    font-size: 24px;
+    border-bottom: 1px solid rgb(221, 231, 233);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  img {
+    float: left;
+    padding: 20px 40px 15px 0;
+  }
+  p {
+
+  }
+}
+
+//************************
+//#Location website field
+//************************
+
+.field--name-field-location-website {
+  //display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 87px;
+  border: 3px solid rgb(221, 231, 233);
+  margin: 20px 10px 20px 0;
+  a {
+    border-left: 4px solid rgb(41, 193, 225);
+    position: inherit;
+    top: 33px;
+    padding-left: 15px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    &:hover {
+      color: rgb(110, 110, 110);
+    }
+    &:active {
+      color: rgb(0, 0, 0);
+    }
+  }
+  ::before {
+    content: url("/themes/custom/onboard_kick/assets/images/icons/web-icon.png");
+    padding-right: 45px;
+    position: relative;
+    top: 18px;
+    left: 20px;
+    display: block;
+    float: left;
+  }
+}
+
+//****************************
+//#Location phone field
+//****************************
+.field--name-field-location-phnoe-number2 {
+  //display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 87px;
+  border: 3px solid rgb(221, 231, 233);
+  margin: 20px 10px 20px 0;
+  p {
+    border-left: 4px solid rgb(41, 193, 225);
+    position: inherit;
+    top: 33px;
+    padding-left: 15px;
+    color: rgb(0, 0, 0);
+    display: inline;
+  }
+  &::before {
+    content: url("/themes/custom/onboard_kick/assets/images/icons/phone-icon.png");
+    padding-right: 45px;
+    position: relative;
+    top: 18px;
+    left: 20px;
+    display: block;
+    float: left;
+  }
+}
+//****************************
+//#Location email field
+//****************************
+
+.field--name-field-location-email2 {
+  //display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 87px;
+  border: 3px solid rgb(221, 231, 233);
+  margin: 20px 10px 20px 0;
+  p {
+    border-left: 4px solid rgb(41, 193, 225);
+    position: inherit;
+    top: 33px;
+    padding-left: 15px;
+    color: rgb(0, 0, 0);
+    display: inline;
+  }
+  &::before {
+    content: url("/themes/custom/onboard_kick/assets/images/icons/mail-icon.png");
+    padding-right: 45px;
+    position: relative;
+    top: 18px;
+    left: 20px;
+    display: block;
+    float: left;
+  }
+}
+
+//*****************************************
+//#Location page | equipment checkboxes
+//*****************************************
+.field--name-field-equipment {
+  width: 50%;
+  float: right;
+  margin-top: 20px;
+  .field__label {
+    margin-bottom: 20px;
+  }
+  .field__items {
+
+    .field__item {
+      display: inline-block;
+      margin: 20px 10px 20px 0;
+      a {
+        position: inherit;
+        top: 33px;
+        padding: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: rgb(41, 193, 225);
+        color: rgb(221, 231, 233);
+      }
+    }
+
+  }
+}
+
+//********************************
+//#Address with Google map field
+//********************************
+
+.field--name-field-location-address {
+  display: inline-block;
+  width: 820px;
+  height: 250px;
+  border: 3px solid rgb(221, 231, 233);
+  iframe {
+    float: right;
+    padding: 10px 10px 10px 0;
+  }
+  p {
+    float: left;
+    display: inline-block;
+    width: 190px;
+    padding-left: 20px;
+    padding-top: 50px;
+  }
+  ::before{
+    float: left;
+    content: url("/themes/custom/onboard_kick/assets/images/icons/address-icon.png");
+    border-right: 4px solid rgb(41, 193, 225);
+    padding: 20px 20px 20px 0;
+    margin: 0 20px 0 20px;
+  }
+}
+
+//*****************************************
+//#Location sidebar second | latest events
+//*****************************************
+
+.block-views-blockevents-what-were-up-to-block-2 {
+  h2 {
+    text-transform: uppercase;
+    padding-left: 10px;
+    margin: 50px 0 40px 0;
+  }
+  .views-field-title {
+    a {
+      border-left: 4px solid rgb(41, 193, 225);
+      position: inherit;
+      text-transform: uppercase;
+      text-decoration: none;
+      top: 33px;
+      padding-left: 15px;
+      color: rgb(0, 0, 0);
+      &:hover {
+        color: rgb(110, 110, 110);
+      }
+      &:active {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+  .views-field-field-start-date {
+    margin: 8px 0;
+    color: rgb(247, 147, 29);
+    font-size: small;
+    padding-left: 20px;
+  }
+  .views-field-field-event-image {
+    padding-left: 20px;
+    margin: 15px 0;
+    img {
+      &:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
