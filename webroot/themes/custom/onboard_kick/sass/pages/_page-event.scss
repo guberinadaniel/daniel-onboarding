@@ -1,0 +1,145 @@
+//********************
+//#Event page banner
+//********************
+
+#block-onboard-kick-eventshero {
+  img {
+    width: 100%;
+    //width: 100vw;
+  }
+}
+
+//*****************************************************
+//#Event sidebar first | about organizer & location
+//*****************************************************
+
+.region-sidebar-first {
+  .block-views-blockabout-organizer-location-block-1, .block-views-blockabout-location-block-1 {
+    h2 {
+      text-transform: uppercase;
+      margin: 40px 0;
+    }
+    div .views-row {
+      border: 2px solid rgb(221, 231, 233);
+      padding: 20px;
+      &:hover {
+        border: 2px solid rgb(247, 147, 29);
+        cursor: pointer;
+      }
+      .views-field-field-company-logo {
+        display: block;
+        float: left;
+      }
+      .views-field-field-company-title {
+        display: inline-block;
+        a {
+          text-decoration: none;
+          margin: 0 0 0 20px;
+          border-left: 4px solid rgb(247, 147, 29);
+          padding: 0 0 7px 15px;
+          vertical-align: sub;
+          color: rgb(0, 0, 0);
+          &:hover {
+            color: rgb(110, 110, 110);
+          }
+          &:active {
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+      .views-field-field-location-image {
+        display: block;
+        float: left;
+      }
+      .views-field-title {
+        display: inline-block;
+        a {
+          text-decoration: none;
+          margin: 0 0 0 20px;
+          border-left: 4px solid rgb(41, 193, 225);
+          padding: 0 0 7px 15px;
+          vertical-align: sub;
+          color: rgb(0, 0, 0);
+          &:hover {
+            color: rgb(110, 110, 110);
+          }
+          &:active {
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+      p {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+//**********************************
+//#Event page | event content type
+//**********************************
+
+.node--type-event.node--view-mode-full {
+
+  .field--name-field-event-image {
+    display: flex;
+    justify-content: center;
+    .image-style-event-img-round-180x180 {
+      width: 180px;
+      height: 180px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+  .field--name-field-event-title {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  .field--name-field-event-type {
+    display: flex;
+    justify-content: center;
+    margin:10px 20px 30px 0;
+    a {
+      text-decoration: none;
+      margin: 0 0 0 20px;
+      border-left: 4px solid rgb(41, 193, 225);
+      padding: 0 0 7px 15px;
+      vertical-align: sub;
+      color: rgb(0, 0, 0);
+      &:hover {
+        color: rgb(110, 110, 110);
+      }
+      &:active {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+  .field--name-field-start-date {
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    .field__label {
+      font-weight: normal;
+      border-left: 4px solid rgb(247, 147, 29);
+      padding: 0 0 7px 15px;
+    }
+  }
+  .field--name-field-end-date {
+    width: 50%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    .field__label {
+      font-weight: normal;
+      border-left: 4px solid rgb(41, 193, 225);
+      padding: 0 0 7px 15px;
+    }
+  }
+  .field--type-text-with-summary {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
