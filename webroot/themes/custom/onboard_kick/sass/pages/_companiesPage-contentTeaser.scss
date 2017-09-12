@@ -1,17 +1,61 @@
 //**************************
 //#Companies view | filter
 //**************************
-.view-filters {
-  .form-item {
+#block-searchcompanies {
+  padding-bottom: 8px;
+  display: inline-table;
+  background: #757575;
+  color: white;
+  .text-formatted.field--type-text-with-summary{
+    border-left: 4px solid rgb(247, 147, 29);
+    margin: 16px 70px;
+    h3 {
+      display: block;
+      background-color: rgb(247, 147, 29);
+      font-size: small;
+      text-transform: uppercase;
+      margin: 20px 60px 13px 22px;
+    }
+    h2 {
 
-    .form-autocomplete.form-text {
-      padding: 8px;
+      font-size: larger;
+      text-transform: uppercase;
+      margin-top: -15px;
+      margin-bottom: 0;
+      padding-left: 20px;
     }
-    .js-form-type-select {
-      padding: 8px;
+  }
+}
+.views-exposed-form {
+  background: #757575;
+  .form-autocomplete.form-text {
+    padding: 13px;
+    border: 1px solid #757575;
+    border-radius: 0.3em;
+  }
+  .js-form-type-select {
+    text-transform: uppercase;
+    border: 1px solid #757575;
+    border-radius: 0.3em;
+    padding: 8px;
+    background: white;
+    label {
+      color: rgb(110, 110, 110);
+      padding-right: 15px;
     }
-    .button.js-form-submit.form-submit {
-      
+  }
+  #edit-actions {
+    display: inline-block;
+    #edit-submit-companies-page {
+      color: white;
+      background: rgb(247, 147, 29);
+      text-transform: uppercase;
+      padding: 10px 50px 10px 50px;
+      margin: 2px;
+      border-radius: 0.3em;
+      &:hover {
+        background: rgb(188, 110, 27);
+      }
     }
   }
 }
@@ -21,7 +65,7 @@
 //***************************
 .view-companies-page {
   .view-content {
-    padding: 0 200px 0 200px;
+    padding: 0 200px 0 0;
   }
 }
 .node--type-company-name.node--view-mode-companies-teaser{
