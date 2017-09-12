@@ -1,0 +1,51 @@
+//**************************
+//#Companies view | filter
+//**************************
+.view-filters {
+  .form-item {
+
+    .form-autocomplete.form-text {
+      padding: 8px;
+    }
+    .js-form-type-select {
+      padding: 8px;
+    }
+    .button.js-form-submit.form-submit {
+      
+    }
+  }
+}
+
+//***************************
+//#Companies view | content
+//***************************
+.view-companies-page {
+  .view-content {
+    padding: 0 200px 0 200px;
+  }
+}
+.node--type-company-name.node--view-mode-companies-teaser{
+  border-bottom: 1px solid rgb(221, 231, 233);
+  padding: 20px 0;
+  h2 {
+    a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      border-left: 4px solid rgb(41, 193, 225);
+      padding-left: 15px;
+    }
+  }
+  .field--name-field-company-logo {
+    img {
+      float: left;
+      padding: 0 10px 15px 20px;
+      margin-right: 30px;
+    }
+  }
+  .field--type-text-with-summary {
+    p {
+
+    }
+  }
+}
+
