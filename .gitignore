@@ -6,3 +6,4 @@
 # OS
 .DS-Store
 /frontend/node_modules/
+/webroot/vendor/
