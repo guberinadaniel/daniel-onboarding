@@ -1,52 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
 </head>
 <body>
-<div class="layout-container">
-
-    <header role="banner">
-        {{ page.header }}
-    </header>
-
-    {{ page.primary_menu }}
-    {{ page.secondary_menu }}
-
-    <main role="main">
-        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-        {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-            {{ page.sidebar_first }}
-        </aside>
-        {% endif %}
-
-        <div class="layout-content">
-            {{ page.content }}
-        </div>{# /.layout-content #}
-
-        {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-            {{ page.sidebar_second }}
-        </aside>
-        {% endif %}
-
-    </main>
-    <footer role="contentinfo">
-        {% if page.footer_service %}
-        {{ page.footer_service }}
-        {% endif %}
-
-        {% if page.footer_menu %}
-        {{ page.footer_menu }}
-        {% endif %}
-
-        {% if page.footer_copyright %}
-        {{ page.footer_copyright }}
-        {% endif %}
-    </footer>
-</div>{# /.layout-container #}
-</body>
+</div>
 </html>

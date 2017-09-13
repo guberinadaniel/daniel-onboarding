@@ -8,16 +8,19 @@
 .layout-sidebar-first {
   width: 24%;
   display: inline-block;
+
 }
 
 .layout-content {
   width: 50%;
   display: inline-block;
+  //float: left;
 }
 
 .layout-sidebar-second {
   width: 24%;
   display: inline-block;
+  //float: right;
 }
 
 .sidebar-none .layout-content{
