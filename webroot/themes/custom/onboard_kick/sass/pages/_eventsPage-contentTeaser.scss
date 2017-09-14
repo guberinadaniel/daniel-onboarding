@@ -1,11 +1,13 @@
 //**************************
-//#Companies view | filter
+//#Events | filter
 //**************************
 #block-searchevents {
+  float: left;
   padding-bottom: 8px;
   display: inline-table;
   background: #757575;
   color: white;
+
   .text-formatted.field--type-text-with-summary{
     border-left: 4px solid rgb(247, 147, 29);
     margin: 16px 70px;
@@ -14,7 +16,7 @@
       background-color: rgb(247, 147, 29);
       font-size: small;
       text-transform: uppercase;
-      margin: 20px 60px 13px 22px;
+      margin: 19px 59px 15px 22px;
     }
     h2 {
 
@@ -46,7 +48,6 @@
     }
   }
   #edit-actions {
-    margin-right: 59px;
     display: inline-block;
     #edit-submit-events-page {
       color: white;

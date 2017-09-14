@@ -1,12 +1,13 @@
 //**************************
-//#Companies | filter
+//#Locations | filter
 //**************************
-#block-searchcompanies {
+#block-searchlocations {
   float: left;
   padding-bottom: 8px;
   display: inline-table;
   background: #757575;
   color: white;
+
   .text-formatted.field--type-text-with-summary{
     border-left: 4px solid rgb(247, 147, 29);
     margin: 16px 70px;
@@ -29,6 +30,7 @@
 }
 .views-exposed-form {
   background: #757575;
+
   .form-autocomplete.form-text {
     padding: 13px;
     border: 1px solid #757575;
@@ -47,7 +49,7 @@
   }
   #edit-actions {
     display: inline-block;
-    #edit-submit-companies-page {
+    #edit-submit-locations-page {
       color: white;
       background: rgb(247, 147, 29);
       text-transform: uppercase;
@@ -60,37 +62,3 @@
     }
   }
 }
-
-//***************************
-//#Companies view | content
-//***************************
-.view-companies-page {
-  .view-content {
-    padding: 5% 10%;
-  }
-}
-.node--type-company-name.node--view-mode-companies-teaser{
-  border-bottom: 1px solid rgb(221, 231, 233);
-  padding: 20px 0;
-  h2 {
-    a {
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      border-left: 4px solid rgb(41, 193, 225);
-      padding-left: 15px;
-    }
-  }
-  .field--name-field-company-logo {
-    img {
-      float: left;
-      padding: 0 10px 15px 20px;
-      margin-right: 30px;
-    }
-  }
-  .field--type-text-with-summary {
-    p {
-
-    }
-  }
-}
-
