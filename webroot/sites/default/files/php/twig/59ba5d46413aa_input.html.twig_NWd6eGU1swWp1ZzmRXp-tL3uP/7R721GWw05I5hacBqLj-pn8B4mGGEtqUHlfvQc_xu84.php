@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/navigation/menu-local-task.html.twig */
-class __TwigTemplate_cfb144e62647cc0719be41ec7b50a5cfceed4945a09631a7178d0a360bd0fb24 extends Twig_Template
+/* themes/custom/onboard_kick/templates/core/input.html.twig */
+class __TwigTemplate_46a555bf0b5faefca2da0aee57e1cf921eb4be2c52a8a133fb7984214b33264a extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -39,18 +39,16 @@ class __TwigTemplate_cfb144e62647cc0719be41ec7b50a5cfceed4945a09631a7178d0a360bd
             throw $e;
         }
 
-        // line 17
-        echo "<li";
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => (((isset($context["is_active"]) ? $context["is_active"] : null)) ? ("is-active") : (""))), "method"), "html", null, true));
-        echo ">";
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["link"]) ? $context["link"] : null), "html", null, true));
-        echo "</li>
-";
+        // line 13
+        echo "<input";
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["attributes"]) ? $context["attributes"] : null), "html", null, true));
+        echo " placeholder=\"SEARCH BY TITLE\"/>";
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/navigation/menu-local-task.html.twig";
+        return "themes/custom/onboard_kick/templates/core/input.html.twig";
     }
 
     public function isTraitable()
@@ -60,7 +58,7 @@ class __TwigTemplate_cfb144e62647cc0719be41ec7b50a5cfceed4945a09631a7178d0a360bd
 
     public function getDebugInfo()
     {
-        return array (  43 => 17,);
+        return array (  43 => 13,);
     }
 
     public function getSource()
@@ -68,20 +66,15 @@ class __TwigTemplate_cfb144e62647cc0719be41ec7b50a5cfceed4945a09631a7178d0a360bd
         return "{#
 /**
  * @file
- * Theme override for a local task link.
+ * Theme override for an 'input' #type form element.
  *
  * Available variables:
- * - attributes: HTML attributes for the wrapper element.
- * - is_active: Whether the task item is an active tab.
- * - link: A rendered link element.
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
  *
- * Note: This template renders the content for each task item in
- * menu-local-tasks.html.twig.
- *
- * @see template_preprocess_menu_local_task()
+ * @see template_preprocess_input()
  */
 #}
-<li{{ attributes.addClass(is_active ? 'is-active') }}>{{ link }}</li>
-";
+<input{{ attributes }} placeholder=\"SEARCH BY TITLE\"/>{{ children }}";
     }
 }

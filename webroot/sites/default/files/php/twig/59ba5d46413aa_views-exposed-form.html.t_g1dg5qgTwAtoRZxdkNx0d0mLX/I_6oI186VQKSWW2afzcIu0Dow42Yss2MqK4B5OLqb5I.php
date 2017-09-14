@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/form/dropbutton-wrapper.html.twig */
-class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f05a0bd extends Twig_Template
+/* core/themes/classy/templates/views/views-exposed-form.html.twig */
+class __TwigTemplate_c4c49b94e40c797675e05c44c224dcc436988758ba5fa1d3c06c7233a66f4899 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,13 +15,13 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("if" => 12, "spaceless" => 13);
+        $tags = array("if" => 12);
         $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('sandbox')->checkSecurity(
-                array('if', 'spaceless'),
+                array('if'),
                 array(),
                 array()
             );
@@ -40,27 +40,27 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
         }
 
         // line 12
-        if ((isset($context["children"]) ? $context["children"] : null)) {
+        if ( !twig_test_empty((isset($context["q"]) ? $context["q"] : null))) {
             // line 13
             echo "  ";
-            ob_start();
-            // line 14
-            echo "    <div class=\"dropbutton-wrapper\">
-      <div class=\"dropbutton-widget\">
-        ";
-            // line 16
-            echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
+            // line 17
+            echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["q"]) ? $context["q"] : null), "html", null, true));
             echo "
-      </div>
-    </div>
-  ";
-            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
+";
         }
+        // line 19
+        echo "<div class=\"form--inline clearfix\">
+  ";
+        // line 20
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["form"]) ? $context["form"] : null), "html", null, true));
+        echo "
+</div>
+";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/form/dropbutton-wrapper.html.twig";
+        return "core/themes/classy/templates/views/views-exposed-form.html.twig";
     }
 
     public function isTraitable()
@@ -70,7 +70,7 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
 
     public function getDebugInfo()
     {
-        return array (  52 => 16,  48 => 14,  45 => 13,  43 => 12,);
+        return array (  55 => 20,  52 => 19,  47 => 17,  45 => 13,  43 => 12,);
     }
 
     public function getSource()
@@ -78,23 +78,24 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
         return "{#
 /**
  * @file
- * Theme override for a dropbutton wrapper.
+ * Theme override for a views exposed form.
  *
  * Available variables:
- * - children: Contains the child elements of the dropbutton menu.
+ * - form: A render element representing the form.
  *
- * @see template_preprocess()
+ * @see template_preprocess_views_exposed_form()
  */
 #}
-{% if children %}
-  {% spaceless %}
-    <div class=\"dropbutton-wrapper\">
-      <div class=\"dropbutton-widget\">
-        {{ children }}
-      </div>
-    </div>
-  {% endspaceless %}
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+{{ q }}
 {% endif %}
+<div class=\"form--inline clearfix\">
+  {{ form }}
+</div>
 ";
     }
 }

@@ -15,7 +15,7 @@ class __TwigTemplate_f9ace3aa3ec13b164c63301a8dddcf02fda35729f7b07cc22ac3551b572
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("if" => 58);
+        $tags = array("if" => 59);
         $filters = array();
         $functions = array();
 
@@ -49,101 +49,105 @@ class __TwigTemplate_f9ace3aa3ec13b164c63301a8dddcf02fda35729f7b07cc22ac3551b572
         echo "
   </header>
 
-  ";
+    ";
         // line 51
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "primary_menu", array()), "html", null, true));
         echo "
-  ";
+    ";
         // line 52
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "secondary_menu", array()), "html", null, true));
+        echo "
+    ";
+        // line 53
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "search_filter", array()), "html", null, true));
         echo "
 
   <div class=\"layout-content-wraper\">
   <main role=\"main\">
     <a id=\"main-content\" tabindex=\"-1\"></a>";
-        // line 57
+        // line 58
         echo "
     ";
-        // line 58
+        // line 59
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_first", array())) {
-            // line 59
+            // line 60
             echo "      <aside class=\"layout-sidebar-first\" role=\"complementary\">
         ";
-            // line 60
+            // line 61
             echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_first", array()), "html", null, true));
             echo "
       </aside>
     ";
         }
-        // line 63
+        // line 64
         echo "
     <div class=\"layout-content\">
       ";
-        // line 65
+        // line 66
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array()), "html", null, true));
         echo "
         <div class=\"layout-content-first-second\">
           ";
-        // line 67
+        // line 68
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content_first", array()), "html", null, true));
         echo "
           ";
-        // line 68
+        // line 69
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content_second", array()), "html", null, true));
         echo "
         </div>
     </div>";
-        // line 71
+        // line 72
         echo "
     ";
-        // line 72
+        // line 73
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_second", array())) {
-            // line 73
+            // line 74
             echo "      <aside class=\"layout-sidebar-second\" role=\"complementary\">
         ";
-            // line 74
+            // line 75
             echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "sidebar_second", array()), "html", null, true));
             echo "
       </aside>
     ";
         }
-        // line 77
+        // line 78
         echo "
   </main>
   </div>
   <footer role=\"contentinfo\">
       ";
-        // line 81
+        // line 82
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_service", array())) {
-            // line 82
+            // line 83
             echo "          ";
             echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_service", array()), "html", null, true));
             echo "
       ";
         }
-        // line 84
+        // line 85
         echo "
       ";
-        // line 85
+        // line 86
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_menu", array())) {
-            // line 86
+            // line 87
             echo "          ";
             echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_menu", array()), "html", null, true));
             echo "
       ";
         }
-        // line 88
+        // line 89
         echo "
       ";
-        // line 89
+        // line 90
         if ($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_copyright", array())) {
-            // line 90
+            // line 91
             echo "          ";
             echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "footer_copyright", array()), "html", null, true));
             echo "
       ";
         }
-        // line 92
+        // line 93
         echo "  </footer>
 </div>";
     }
@@ -160,7 +164,7 @@ class __TwigTemplate_f9ace3aa3ec13b164c63301a8dddcf02fda35729f7b07cc22ac3551b572
 
     public function getDebugInfo()
     {
-        return array (  147 => 92,  141 => 90,  139 => 89,  136 => 88,  130 => 86,  128 => 85,  125 => 84,  119 => 82,  117 => 81,  111 => 77,  105 => 74,  102 => 73,  100 => 72,  97 => 71,  92 => 68,  88 => 67,  83 => 65,  79 => 63,  73 => 60,  70 => 59,  68 => 58,  65 => 57,  58 => 52,  54 => 51,  48 => 48,  43 => 45,);
+        return array (  151 => 93,  145 => 91,  143 => 90,  140 => 89,  134 => 87,  132 => 86,  129 => 85,  123 => 83,  121 => 82,  115 => 78,  109 => 75,  106 => 74,  104 => 73,  101 => 72,  96 => 69,  92 => 68,  87 => 66,  83 => 64,  77 => 61,  74 => 60,  72 => 59,  69 => 58,  62 => 53,  58 => 52,  54 => 51,  48 => 48,  43 => 45,);
     }
 
     public function getSource()
@@ -215,8 +219,9 @@ class __TwigTemplate_f9ace3aa3ec13b164c63301a8dddcf02fda35729f7b07cc22ac3551b572
     {{ page.header }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+    {{ page.primary_menu }}
+    {{ page.secondary_menu }}
+    {{ page.search_filter }}
 
   <div class=\"layout-content-wraper\">
   <main role=\"main\">
