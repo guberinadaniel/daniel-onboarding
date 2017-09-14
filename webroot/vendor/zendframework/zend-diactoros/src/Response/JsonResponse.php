@@ -36,16 +36,6 @@ class JsonResponse extends Response
     const DEFAULT_JSON_FLAGS = 79;
 
     /**
-     * @var mixed
-     */
-    private $payload;
-
-    /**
-     * @var int
-     */
-    private $encodingOptions;
-
-    /**
      * Create a JSON response with the given data.
      *
      * Default JSON encoding is performed with the following options, which
@@ -69,69 +59,13 @@ class JsonResponse extends Response
         array $headers = [],
         $encodingOptions = self::DEFAULT_JSON_FLAGS
     ) {
-        $this->setPayload($data);
-        $this->encodingOptions = $encodingOptions;
-
-        $json = $this->jsonEncode($data, $this->encodingOptions);
-        $body = $this->createBodyFromJson($json);
+        $body = new Stream('php://temp', 'wb+');
+        $body->write($this->jsonEncode($data, $encodingOptions));
+        $body->rewind();
 
         $headers = $this->injectContentType('application/json', $headers);
 
         parent::__construct($body, $status, $headers);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPayload()
-    {
-        return $this->payload;
-    }
-
-    /**
-     * @param $data
-     *
-     * @return JsonResponse
-     */
-    public function withPayload($data)
-    {
-        $new = clone $this;
-        $new->setPayload($data);
-        return $this->updateBodyFor($new);
-    }
-
-    /**
-     * @return int
-     */
-    public function getEncodingOptions()
-    {
-        return $this->encodingOptions;
-    }
-
-    /**
-     * @param int $encodingOptions
-     *
-     * @return JsonResponse
-     */
-    public function withEncodingOptions($encodingOptions)
-    {
-        $new = clone $this;
-        $new->encodingOptions = $encodingOptions;
-        return $this->updateBodyFor($new);
-    }
-
-    /**
-     * @param string $json
-     *
-     * @return Stream
-     */
-    private function createBodyFromJson($json)
-    {
-        $body = new Stream('php://temp', 'wb+');
-        $body->write($json);
-        $body->rewind();
-
-        return $body;
     }
 
     /**
@@ -162,30 +96,5 @@ class JsonResponse extends Response
         }
 
         return $json;
-    }
-
-    /**
-     * @param $data
-     */
-    private function setPayload($data)
-    {
-        if (is_object($data)) {
-            $data = clone $data;
-        }
-
-        $this->payload = $data;
-    }
-
-    /**
-     * Update the response body for the given instance.
-     *
-     * @param self $toUpdate Instance to update.
-     * @return JsonResponse Returns a new instance with an updated body.
-     */
-    private function updateBodyFor(self $toUpdate)
-    {
-        $json = $this->jsonEncode($toUpdate->payload, $toUpdate->encodingOptions);
-        $body = $this->createBodyFromJson($json);
-        return $toUpdate->withBody($body);
     }
 }
