@@ -5,4 +5,4 @@
 /runtime/
 # OS
 .DS-Store
-/frontend/node_modules/
+node_modules/
