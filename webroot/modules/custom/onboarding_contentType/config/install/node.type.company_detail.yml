@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - Company_detail
+name: 'Company Detail'
+type: Company_detail
+description: 'Content type that can be used to add <em>Company details</em> page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -7,7 +7,7 @@
 
 .layout-sidebar-first {
   width: 24%;
-  display: inline-block;
+  display: inline-flex;
 }
 
 .layout-content {
@@ -17,7 +17,7 @@
 
 .layout-sidebar-second {
   width: 24%;
-  display: inline-block;
+  display: inline-flex;
 }
 
 .sidebar-none .layout-content{
@@ -43,13 +43,3 @@
   }
 }
 
-///**
-// * Main
-// */
-//.layout-main-wrapper {
-//  min-height: 300px;
-//}
-//.layout-main {
-//  margin-top: 20px;
-//  margin-bottom: 40px;
-//}

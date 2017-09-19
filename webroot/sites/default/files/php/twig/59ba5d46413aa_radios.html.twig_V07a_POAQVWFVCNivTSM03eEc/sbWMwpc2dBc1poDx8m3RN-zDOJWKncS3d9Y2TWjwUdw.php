@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/form/input.html.twig */
-class __TwigTemplate_96e1285989bbd806b78ef563232eff11ad3bee58ecfd1e883c7c652802a43279 extends Twig_Template
+/* core/themes/classy/templates/form/radios.html.twig */
+class __TwigTemplate_462a3092f4992f30e2620e82bb8fc11ff38d3433c79c837089f798a7d5fcb119 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -40,17 +40,17 @@ class __TwigTemplate_96e1285989bbd806b78ef563232eff11ad3bee58ecfd1e883c7c652802a
         }
 
         // line 13
-        echo "<input";
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["attributes"]) ? $context["attributes"] : null), "html", null, true));
-        echo " />";
+        echo "<div";
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => "form-radios"), "method"), "html", null, true));
+        echo ">";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
-        echo "
+        echo "</div>
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/form/input.html.twig";
+        return "core/themes/classy/templates/form/radios.html.twig";
     }
 
     public function isTraitable()
@@ -68,16 +68,16 @@ class __TwigTemplate_96e1285989bbd806b78ef563232eff11ad3bee58ecfd1e883c7c652802a
         return "{#
 /**
  * @file
- * Theme override for an 'input' #type form element.
+ * Theme override for a 'radios' #type form element.
  *
- * Available variables:
- * - attributes: A list of HTML attributes for the input element.
- * - children: Optional additional rendered elements.
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The rendered radios.
  *
- * @see template_preprocess_input()
+ * @see template_preprocess_radios()
  */
 #}
-<input{{ attributes }} />{{ children }}
+<div{{ attributes.addClass('form-radios') }}>{{ children }}</div>
 ";
     }
 }

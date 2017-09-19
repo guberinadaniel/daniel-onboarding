@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/form/input.html.twig */
-class __TwigTemplate_96e1285989bbd806b78ef563232eff11ad3bee58ecfd1e883c7c652802a43279 extends Twig_Template
+/* core/themes/seven/templates/image-widget.html.twig */
+class __TwigTemplate_88fc4e955f0c15a4170af230b84cea0adb425112f91136cb70cb4bbefd63f192 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,15 +15,15 @@ class __TwigTemplate_96e1285989bbd806b78ef563232eff11ad3bee58ecfd1e883c7c652802a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array();
+        $tags = array("include" => 11);
         $filters = array();
-        $functions = array();
+        $functions = array("attach_library" => 12);
 
         try {
             $this->env->getExtension('sandbox')->checkSecurity(
+                array('include'),
                 array(),
-                array(),
-                array()
+                array('attach_library')
             );
         } catch (Twig_Sandbox_SecurityError $e) {
             $e->setTemplateFile($this->getTemplateName());
@@ -39,18 +39,17 @@ class __TwigTemplate_96e1285989bbd806b78ef563232eff11ad3bee58ecfd1e883c7c652802a
             throw $e;
         }
 
-        // line 13
-        echo "<input";
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["attributes"]) ? $context["attributes"] : null), "html", null, true));
-        echo " />";
-        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
+        // line 11
+        $this->loadTemplate("@classy/content-edit/image-widget.html.twig", "core/themes/seven/templates/image-widget.html.twig", 11)->display($context);
+        // line 12
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->env->getExtension('drupal_core')->attachLibrary("classy/image-widget"), "html", null, true));
         echo "
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/form/input.html.twig";
+        return "core/themes/seven/templates/image-widget.html.twig";
     }
 
     public function isTraitable()
@@ -60,7 +59,7 @@ class __TwigTemplate_96e1285989bbd806b78ef563232eff11ad3bee58ecfd1e883c7c652802a
 
     public function getDebugInfo()
     {
-        return array (  43 => 13,);
+        return array (  45 => 12,  43 => 11,);
     }
 
     public function getSource()
@@ -68,16 +67,15 @@ class __TwigTemplate_96e1285989bbd806b78ef563232eff11ad3bee58ecfd1e883c7c652802a
         return "{#
 /**
  * @file
- * Theme override for an 'input' #type form element.
+ * Theme override for an image field widget.
  *
- * Available variables:
- * - attributes: A list of HTML attributes for the input element.
- * - children: Optional additional rendered elements.
+ * Included from Classy theme.
  *
- * @see template_preprocess_input()
+ * @see template_preprocess_image_widget()
  */
 #}
-<input{{ attributes }} />{{ children }}
+{% include '@classy/content-edit/image-widget.html.twig' %}
+{{ attach_library('classy/image-widget') }}
 ";
     }
 }

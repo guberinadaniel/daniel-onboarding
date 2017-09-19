@@ -4,6 +4,16 @@
 // Base level typography, fonts, colors, sizes
 //
 // ========================================
+
+@font-face{
+  font-family:'Karla-Regular';
+  src: url('/themes/custom/onboard_kick/assets/fonts/Karla-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: Karla-Regular;
+}
+
 p {
 
 	&:last-child {

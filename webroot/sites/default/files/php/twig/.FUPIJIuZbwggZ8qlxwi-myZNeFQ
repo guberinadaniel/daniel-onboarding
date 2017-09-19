@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/form/dropbutton-wrapper.html.twig */
-class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f05a0bd extends Twig_Template
+/* core/themes/classy/templates/navigation/menu-local-task.html.twig */
+class __TwigTemplate_cfb144e62647cc0719be41ec7b50a5cfceed4945a09631a7178d0a360bd0fb24 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,13 +15,13 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("if" => 12, "spaceless" => 13);
+        $tags = array();
         $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('sandbox')->checkSecurity(
-                array('if', 'spaceless'),
+                array(),
                 array(),
                 array()
             );
@@ -39,28 +39,18 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
             throw $e;
         }
 
-        // line 12
-        if ((isset($context["children"]) ? $context["children"] : null)) {
-            // line 13
-            echo "  ";
-            ob_start();
-            // line 14
-            echo "    <div class=\"dropbutton-wrapper\">
-      <div class=\"dropbutton-widget\">
-        ";
-            // line 16
-            echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
-            echo "
-      </div>
-    </div>
-  ";
-            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        }
+        // line 17
+        echo "<li";
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => (((isset($context["is_active"]) ? $context["is_active"] : null)) ? ("is-active") : (""))), "method"), "html", null, true));
+        echo ">";
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["link"]) ? $context["link"] : null), "html", null, true));
+        echo "</li>
+";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/form/dropbutton-wrapper.html.twig";
+        return "core/themes/classy/templates/navigation/menu-local-task.html.twig";
     }
 
     public function isTraitable()
@@ -70,7 +60,7 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
 
     public function getDebugInfo()
     {
-        return array (  52 => 16,  48 => 14,  45 => 13,  43 => 12,);
+        return array (  43 => 17,);
     }
 
     public function getSource()
@@ -78,23 +68,20 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
         return "{#
 /**
  * @file
- * Theme override for a dropbutton wrapper.
+ * Theme override for a local task link.
  *
  * Available variables:
- * - children: Contains the child elements of the dropbutton menu.
+ * - attributes: HTML attributes for the wrapper element.
+ * - is_active: Whether the task item is an active tab.
+ * - link: A rendered link element.
  *
- * @see template_preprocess()
+ * Note: This template renders the content for each task item in
+ * menu-local-tasks.html.twig.
+ *
+ * @see template_preprocess_menu_local_task()
  */
 #}
-{% if children %}
-  {% spaceless %}
-    <div class=\"dropbutton-wrapper\">
-      <div class=\"dropbutton-widget\">
-        {{ children }}
-      </div>
-    </div>
-  {% endspaceless %}
-{% endif %}
+<li{{ attributes.addClass(is_active ? 'is-active') }}>{{ link }}</li>
 ";
     }
 }

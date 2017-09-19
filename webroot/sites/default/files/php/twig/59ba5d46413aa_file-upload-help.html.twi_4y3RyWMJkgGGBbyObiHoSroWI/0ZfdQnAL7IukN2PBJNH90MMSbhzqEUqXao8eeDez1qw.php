@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/form/dropbutton-wrapper.html.twig */
-class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f05a0bd extends Twig_Template
+/* core/themes/classy/templates/content-edit/file-upload-help.html.twig */
+class __TwigTemplate_10551433592fd2ef34dd9d4c0babc800c68d25c5f597fa4617aed1f15d3f66a7 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,14 +15,14 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("if" => 12, "spaceless" => 13);
-        $filters = array();
+        $tags = array();
+        $filters = array("safe_join" => 12);
         $functions = array();
 
         try {
             $this->env->getExtension('sandbox')->checkSecurity(
-                array('if', 'spaceless'),
                 array(),
+                array('safe_join'),
                 array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
@@ -40,27 +40,14 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
         }
 
         // line 12
-        if ((isset($context["children"]) ? $context["children"] : null)) {
-            // line 13
-            echo "  ";
-            ob_start();
-            // line 14
-            echo "    <div class=\"dropbutton-wrapper\">
-      <div class=\"dropbutton-widget\">
-        ";
-            // line 16
-            echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
-            echo "
-      </div>
-    </div>
-  ";
-            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        }
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->renderVar($this->env->getExtension('drupal_core')->safeJoin($this->env, (isset($context["descriptions"]) ? $context["descriptions"] : null), "<br />")));
+        echo "
+";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/form/dropbutton-wrapper.html.twig";
+        return "core/themes/classy/templates/content-edit/file-upload-help.html.twig";
     }
 
     public function isTraitable()
@@ -70,7 +57,7 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
 
     public function getDebugInfo()
     {
-        return array (  52 => 16,  48 => 14,  45 => 13,  43 => 12,);
+        return array (  43 => 12,);
     }
 
     public function getSource()
@@ -78,23 +65,15 @@ class __TwigTemplate_7dbf69fc2d61d64bc24d135ff3e50e8c9f69e9aa21055118b40c464f6f0
         return "{#
 /**
  * @file
- * Theme override for a dropbutton wrapper.
+ * Theme override to display help text for file fields.
  *
  * Available variables:
- * - children: Contains the child elements of the dropbutton menu.
+ * - descriptions: Lines of help text for uploading a file.
  *
- * @see template_preprocess()
+ * @see template_preprocess_file_upload_help()
  */
 #}
-{% if children %}
-  {% spaceless %}
-    <div class=\"dropbutton-wrapper\">
-      <div class=\"dropbutton-widget\">
-        {{ children }}
-      </div>
-    </div>
-  {% endspaceless %}
-{% endif %}
+{{ descriptions|safe_join('<br />') }}
 ";
     }
 }
