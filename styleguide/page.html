@@ -1,0 +1,66 @@
+/**
+*Regions:
+* - page.header: Items for the header region.
+* - page.navigation: Items for the navigation reagion.
+* - page.baner: Items for the baner region.
+* - page.serach_filter: Items for the search_filter region.
+* - page.content: The main content of the current page.
+* - page.sidebar_first: Items for the first sidebar.
+* - page.sidebar_second: Items for the second sidebar.
+* - page.featured_first: Items for the featured first region.
+* - page.featured_second: Items for the featured second region.
+* - page.footer_top: Items for the footer top region.
+* - page.footer_menu: Items for the footer menu region.
+* - page.footer_bottom: Items for the footer bottom region.
+*/
+
+<div class="layout-container">
+
+  <header role="banner">
+    {{ page.header }}
+  </header>
+
+    {{ page.navigation }}
+    {{ page.baner }}
+    {{ page.search_filter }}
+
+  <div class="layout-content-wraper">
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    <div class="layout-content">
+      {{ page.content }}
+        <div class="layout-content-featured">
+          {{ page.featured_first }}
+          {{ page.featured_second }}
+        </div>
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </main>
+  </div>
+  <footer role="contentinfo">
+      {% if page.footer_top %}
+          {{ page.footer_top }}
+      {% endif %}
+
+      {% if page.footer_menu %}
+          {{ page.footer_menu }}
+      {% endif %}
+
+      {% if page.footer_bottom %}
+          {{ page.footer_bottom }}
+      {% endif %}
+  </footer>
+</div>
